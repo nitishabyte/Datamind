@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataMind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>DataMind</h1>
+    <p class="tagline">Upload a dataset, ask it questions in plain English, watch it show its work.</p>
+  </header>
+
+  <main class="notebook">
+
+    <!-- Upload panel -->
+    <section class="panel" id="upload-panel">
+      <h2>1. Load a dataset</h2>
+      <div class="upload-row">
+        <input type="file" id="file-input" accept=".csv">
+        <button id="upload-btn" disabled>Upload</button>
+      </div>
+      <p class="status-line" id="upload-status">No file loaded yet.</p>
+    </section>
+
+    <!-- Ask panel -->
+    <section class="panel" id="ask-panel" hidden>
+      <h2>2. Ask a question</h2>
+      <div class="ask-row">
+        <input type="text" id="question-input" placeholder="e.g. Which departments are least efficient?">
+        <button id="ask-btn">Ask</button>
+      </div>
+      <p class="status-line" id="ask-status"></p>
+    </section>
+
+    <!-- Log of entries -->
+    <section class="log" id="log"></section>
+
+    <!-- Audit trail -->
+    <section class="panel audit-panel">
+      <button id="audit-toggle" class="text-btn">View full audit log</button>
+      <div id="audit-log" hidden></div>
+    </section>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

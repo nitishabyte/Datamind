@@ -1,0 +1,15 @@
+# This file tells Git which files/folders to NEVER track or upload.
+# .env is the most important line here — it holds your real API key.
+.env
+
+# Generated data specific to your local runs — not source code, so it
+# shouldn't be committed. Anyone cloning this repo will regenerate
+# these automatically just by using the app.
+audit_log.db
+charts/
+
+# Standard Python clutter that doesn't need to be in version control
+__pycache__/
+*.pyc
+venv/
+.venv/
